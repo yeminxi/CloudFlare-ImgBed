@@ -153,17 +153,11 @@ async function moveFile(env, fileId, newFileId, cdnUrl, url) {
             throw new Error('Unsupported Channel');
         }
 
-<<<<<<< HEAD
-
-        // 其他渠道，直接修改KV中的id为newFileId
-        img.metadata.Folder = dist;
-=======
         // 更新文件夹信息
         const folderPath = newFileId.split('/').slice(0, -1).join('/');
         img.metadata.Folder = folderPath;
         
         // 更新KV存储
->>>>>>> 9dece68401d0c0aa92d3eb43f880a39f51365715
         await env.img_url.put(newFileId, img.value, { metadata: img.metadata });
         await env.img_url.delete(fileId);
 
