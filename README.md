@@ -1,8 +1,29 @@
-# CloudFlare-ImgBed
+<div align="center">
+    <a href="https://github.com/MarSeventh/CloudFlare-ImgBed"><img width="80%" alt="logo" src="static/readme/banner.png"/></a>
+    <p><em>🗂️开源文件托管解决方案，基于 Cloudflare Pages，支持 Telegram Bot 、 Cloudflare R2 ，S3 等多种存储渠道</em></p>
+    <div>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/MarSeventh/CloudFlare-ImgBed" alt="License" />
+        </a>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/releases">
+        <img src="https://img.shields.io/github/release/MarSeventh/CloudFlare-ImgBed" alt="latest version" />
+        </a>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/releases">
+        <img src="https://img.shields.io/github/downloads/MarSeventh/CloudFlare-ImgBed/total?color=%239F7AEA&logo=github" alt="Downloads" />
+        </a>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/issues">
+          <img src="https://img.shields.io/github/issues/MarSeventh/CloudFlare-ImgBed" alt="Issues" />
+        </a>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/stargazers">
+          <img src="https://img.shields.io/github/stars/MarSeventh/CloudFlare-ImgBed" alt="Stars" />
+        </a>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/network/members">
+          <img src="https://img.shields.io/github/forks/MarSeventh/CloudFlare-ImgBed" alt="Forks" />
+        </a>
+    </div>
+</div>
 
-开源文件托管解决方案，基于 Cloudflare Pages，支持 Telegram Bot 、 Cloudflare R2 ，S3 API 等多种不同存储渠道，支持目录功能。
-
-**前端仓库**：[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)
+---
 
 > [!IMPORTANT]
 >
@@ -15,8 +36,11 @@
 
 ## 置顶
 
-部署使用出现问题，请先仔细查阅文档、常见问题解答以及已有issues。
-**注意**：本仓库为[Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)项目的重制版，如果你觉得本项目不错，在支持本项目的同时，也请支持原项目。
+1. 部署使用出现问题，请先仔细查阅文档、常见问题解答以及已有issues。
+
+2. **前端仓库**：[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)
+
+3. **注意**：本仓库为[Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)项目的重制版，如果你觉得本项目不错，在支持本项目的同时，也请支持原项目。
 
 ## 2025.2.6  V2.0 版本升级注意事项
 
@@ -42,6 +66,19 @@
 > 此外，目前**KV数据库为必须配置**，如果以前未配置请按照文档说明配置。
 >
 > 出现问题，请先查看第5节常见问题Q&A部分。
+
+</details>
+
+<details>
+    <summary>生态建设</summary>
+
+
+
+## 1. 插件
+
+- **编辑器内自动上传（油猴脚本）**：https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
+
+
 
 </details>
 
@@ -72,7 +109,7 @@
 
 
 
-## 最近更新 2025.3.7
+## 最近更新
 
 Add Features:
 
@@ -81,7 +118,8 @@ Add Features:
   - 整目录删除
   - 文件位置移动（ Telegraph 和旧版 Telegram 渠道不支持移动）
   - 按目录读取文件
-- 随机图API支持按目录读取
+- 随机图API支持按目录读取，支持按目录进行权限控制
+- 上传用户管理支持显示IP具体位置
 
 Fix Bugs:
 
@@ -92,6 +130,22 @@ Fix Bugs:
 <details>
     <summary>更新日志</summary>
 
+
+## 2025.3.14
+
+Add Features:
+
+- 上传用户管理支持显示IP具体位置
+
+## 2025.3.8
+
+Add Features:
+
+- 随机图API支持按目录读取，支持按目录进行权限控制
+
+Fix Bugs:
+
+- 修复随机图API的缓存问题
 
 ## 2025.3.7
 
@@ -318,9 +372,7 @@ Add Features:
 
 # 1.Introduction
 
-免费图片托管解决方案（支持存储绝大多数常见格式的**图片、视频、动图**等），具有**后台管理、图片审查**、**登录鉴权**、**页面自定义**、**多种方式及多文件上传**、**多文件及多格式链接复制**等功能（详见[第2章](#2.Features))。
-
-此外，上传**并没有严格限制文件类型**，理论上你可以上传**任何**文件，但是暂时不会针对图片和视频外的文件进行特殊优化和适配。
+免费文件托管解决方案，具有**上传**、**管理**、**读取**、**删除**等全链路功能，覆盖文件全生命周期，支持**鉴权**、**目录**、**图片审查**、**随机图**等各项特性。
 
 ![CloudFlare](static/readme/海报.png)
 
@@ -358,6 +410,8 @@ Add Features:
     > 3. 上传显示实时上传进度
     > 4. Web和API端上传图片，均可直接展示在管理页面中
     > 5. 过大图片在前端进行压缩，提升上传稳定性和加载性能;支持自定义压缩质量，自定义开启前后端压缩功能
+    
+  - **支持指定上传目录**
   
 - **多样化复制**
 
@@ -466,6 +520,8 @@ Add Features:
 - **S3** API渠道：在服务提供商处，准备`S3_ACCESS_KEY_ID`、`S3_SECRET_ACCESS_KEY`、`S3_BUCKET_NAME`、`S3_ENDPOINT`等必须参数。（常见服务提供商密钥获取教程参见：[CloudFlare-ImgBed常用S3存储配置教程 – yunsen2025的小窝](https://www.yunsen2025.top/cloudflare-imgbed-s3-she-zhi/)）
 
 </details>
+
+---
 
 ### 3.1.2部署教程
 
@@ -659,6 +715,8 @@ Add Features:
 
 </details>
 
+---
+
 ### 3.1.3可选配置
 
 <details>
@@ -787,6 +845,8 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
 
 ##### </details>
 
+---
+
 ### 3.1.4其他操作指南
 
 <details>
@@ -822,13 +882,15 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
 
 ## 4.1Web端使用
 
-![](static/readme/202412092301397.png)
+![image-20250313204101984](static/readme/202503132041511.png)
 
-![image-20250206155746495](static/readme/202502061557221.png)
+![image-20250313204138886](static/readme/202503132041072.png)
 
-![image-20250206155901631](static/readme/202502061559473.png)
+![image-20250313204308225](static/readme/202503132043466.png)
 
-![image-20250206155825926](static/readme/202502061558281.png)
+![image-20250314152355339](static/readme/202503141524797.png)
+
+![image-20250313204325002](static/readme/202503132043265.png)
 
 ## 4.2API文档
 
@@ -954,6 +1016,8 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
 39. :white_check_mark:~~页脚可自定义隐藏~~（2025.2.4已完成）
 40. :hourglass_flowing_sand:搜索功能增强
 41. :white_check_mark:支持粘贴多个链接，支持外链管理
+42. :hourglass_flowing_sand:上传文件记录MD5，支持文件硬链接
+43. :hourglass_flowing_sand:上传页面增加最近上传展示
 
 </details>
 
