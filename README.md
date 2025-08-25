@@ -1,6 +1,9 @@
 <div align="center">
     <a href="https://github.com/MarSeventh/CloudFlare-ImgBed"><img width="80%" alt="logo" src="static/readme/banner.png"/></a>
-    <p><em>🗂️开源文件托管解决方案，基于 Cloudflare Pages，支持 Telegram Bot 、 Cloudflare R2 ，S3 等多种存储渠道</em></p>
+    <p><em>🗂️开源文件托管解决方案，支持 Docker 和无服务器部署，支持 Telegram Bot 、 Cloudflare R2 、S3 等多种存储渠道</em></p>
+    <p>
+        <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/README.md">简体中文</a> | <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/README_en.md">English</a> | <a href="https://cfbed.sanyue.de">官方网站</a>
+    </p>
     <div>
         <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/MarSeventh/CloudFlare-ImgBed" alt="License" />
@@ -23,11 +26,20 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 8b4ebb4fc8f9b507e0fce1655bb8b80dadef58c5
 ---
 
 > [!IMPORTANT]
 >
 > **v2.0 版本升级注意事项请查看公告！**
+
+
 
 <details>
     <summary>公告</summary>
@@ -38,21 +50,17 @@
 
 1. 部署使用出现问题，请先仔细查阅文档、常见问题解答以及已有issues。
 
-2. **前端仓库**：[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)
-
-3. **注意**：本仓库为[Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)项目的重制版，如果你觉得本项目不错，在支持本项目的同时，也请支持原项目。
+2. **注意**：本仓库为[Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)项目的重制版，如果你觉得本项目不错，在支持本项目的同时，也请支持原项目。
 
 ## 2025.2.6  V2.0 版本升级注意事项
 
-> v2.0 beta 版已发布，相较于 v1.0 版本进行了大量改动和优化，但 beta 版本可能存在潜在不稳定性，若您追求稳定，可选择暂缓更新。
+> v2.0 版已发布，相较于 v1.0 版本进行了大量改动和优化，但 beta 版本可能存在潜在不稳定性，若您追求稳定，可选择暂缓更新。
 >
 > 由于**构建命令发生了变化**，此次更新需要您**手动进行**，请按照以下步骤进行操作：
 >
 > - 同步fork的仓库至最新版（若已自动同步可忽略）
 >
 > - 前往 pages 管理页面，进入`设置`->`构建`，编辑`构建配置`，在`构建命令`处填写`npm install`
->
->   ![image-20250212190315179](static/readme/202502121903327.png)
 >
 > - 新版本所有设置项已**迁移至 管理端->系统设置 界面**，原则上无需再通过环境变量的方式进行设置，通过系统设置界面进行的设置将**覆盖掉**环境变量中的设置，但为了保证 **Telegram渠道的图片** 能够与旧版本相兼容，**若您之前设置了 Telegram 渠道相关的环境变量，请将其保留！**
 >
@@ -69,13 +77,12 @@
 
 </details>
 
-<details>
-    <summary>生态建设</summary>
 
 
 
-## 1. 插件
+# 1. Introduction
 
+<<<<<<< HEAD
 - **编辑器内自动上传（油猴脚本）**：https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
 
 ## 2.仓库
@@ -375,527 +382,47 @@ Add Features:
 # 1.Introduction
 
 免费文件托管解决方案，具有**上传**、**管理**、**读取**、**删除**等全链路功能，覆盖文件全生命周期，支持**鉴权**、**目录**、**图片审查**、**随机图**等各项特性。
+=======
+免费文件托管解决方案，具有**上传**、**管理**、**读取**、**删除**等全链路功能，覆盖文件全生命周期，支持**鉴权**、**目录**、**图片审查**、**随机图**等各项特性（详见[功能文档](https://cfbed.sanyue.de/guide/features.html)）。
+>>>>>>> 8b4ebb4fc8f9b507e0fce1655bb8b80dadef58c5
 
 ![CloudFlare](static/readme/海报.png)
 
-# 2.Features
+# 2. [Document](https://cfbed.sanyue.de)
 
-<details>
-    <summary>项目特性</summary>
+提供详细的部署文档、功能文档、开发计划、更新日志、常见问题解答等，帮助您快速上手。
 
-- **开源**
-  
-  - 前端开源（可自行修改、打包使用）
-  
-- **炫酷的动效（**
-  
-  - 流畅丝滑的过渡动画~
-  - 上传文件实现呼吸灯效果
-  - 灵动的操作体验
-  
-- **人性化上传**
-  
-  - **覆盖大多数文件格式**：支持绝大多数常见**图片、视频、动图**等，同时也支持其他大多数格式的文件
-  
-  - **支持多种存储渠道**：支持 **Telegram Bot**, **Cloudflare R2**, **S3**  等多种存储渠道一键切换
-  
-    > Telegram Bot渠道：上传文件大小限制为20MB，提供客户端和服务端压缩功能
-    >
-    > Cloudflare R2渠道：上传大小不限，但超过免费额度会扣费，详见[Pricing | Cloudflare R2 docs](https://developers.cloudflare.com/r2/pricing/)
-    >
-    > ![](static/readme/202411052346701.png)
-  
-  - **上传方式多样**：支持多种上传方式（**拖拽点击、粘贴**）（Web/API)
-  
-    > 1. 粘贴上传支持**文件**和**URL**
-    > 2. 支持批量上传（不限同时选择文件数量，但为了保证稳定性，同时处于上传状态的文件最多为10个）
-    > 3. 上传显示实时上传进度
-    > 4. Web和API端上传图片，均可直接展示在管理页面中
-    > 5. 过大图片在前端进行压缩，提升上传稳定性和加载性能;支持自定义压缩质量，自定义开启前后端压缩功能
-    
-  - **支持指定上传目录**
-  
-- **多样化复制**
+[![更新日志](https://recent-update.cfbed.sanyue.de/cn)](https://cfbed.sanyue.de/guide/update-log.html)
 
-  - 支持**整体复制**和**单独复制**（整体复制即将所有链接通过换行串联起来后复制）
+# 3. Demo
 
-    > 1. 支持**MarkDown、HTML、BBCode和原始链接**四种格式复制
-    > 2. 上传完成后直观展示四种格式链接
-
-  - 支持设置**自定义链接前缀**，便于接入三方CDN服务
-
-- **支持身份认证、防滥用**
-  - 支持Web和API**上传认证**（感谢[hl128k](https://github.com/hl128k)）
-  - 支持访问域名限制（感谢[hl128k](https://github.com/hl128k)）
-  - 支持上传IP统计，支持禁止指定IP上传
-  
-- **支持页面自定义**
-  - **背景自定义**
-  
-    > 1. 页面背景支持**单图**、**自定义多图轮播**、**bing随机图轮播**等多种模式
-    > 2. 背景透明度、切换时间支持自定义
-  
-  - **网站信息自定义**
-  
-    > 1. 自定义图床名称和Logo
-    > 2. 自定义网站标题和Icon
-    > 3. 页脚传送门自定义
-    > 4. 支持页脚隐藏
-  
-- **一些小功能**
-  - 支持**随机图**API，从图床中随机返回一张图片
-
-- **以及原版所有特性**
-
-  > 1.**无限图片储存数量**，你可以上传不限数量的图片
-  >
-  > 2.无需购买服务器，托管于 Cloudflare 的网络上，当使用量不超过 Cloudflare 的免费额度时，完全免费
-  >
-  > 3.无需购买域名，可以使用 Cloudflare Pages 提供的`*.pages.dev`的免费二级域名，同时也支持绑定自定义域名
-  >
-  > 4.支持**图片审查** API，可根据需要开启，开启后不良图片将自动屏蔽，不再加载
-  >
-  > 5.支持**后台图片管理**，可以对上传的图片进行在线预览，添加白名单，黑名单等操作
-
-</details>
-
-
-# 3.Deployment
-
-## 3.1部署使用
-
-**注意修改完环境变量，重新部署才能生效**，见[3.1章最后一节](#3.1.4其他操作指南)；**版本更新方式**，也请见[3.1章最后一节](#3.1.4其他操作指南)
-
-<details>
-    <summary>详细部署教程</summary>
-
-
-### 3.1.1前期准备
-
-<details>
-    <summary>根据所需开通的渠道进行以下准备</summary>
-
-
-
-- 开通**Telegram Bot渠道**：**Telegram的`TG_BOT_TOKEN`和`TG_CHAT_ID`**
-
-  <details>
-      <summary>TG_BOT_TOKEN和TG_CHAT_ID的获取方式</summary>
-
-
-  首先需要拥有一个Telegram账户，然后按照以下步骤获取`TG_BOT_TOKEN`和`TG_CHAT_ID`。
-
-  1. 向[@BotFather](https://t.me/BotFather)发送`/newbot`，按照提示输入bot的备注、用户名等信息。成功创建后获得`TG_BOT_TOKEN`。
-
-     <img src="static/readme/202409071744569.png" style="width: 50%;" />
-
-  2. 创建一个新的频道（Channel），进入新建的频道，选择频道管理，将刚才创建的机器人设为频道管理员。
-
-     <img src="static/readme/202409071758534.png" style="display:inline-block; width:33%"/><img src="static/readme/202409071758796.png" style="display:inline-block; width:32%"/><img src="static/readme/202410291531473.png" style="width:33%;display: inline-block" />
-
-  3. 向[@VersaToolsBot](https://t.me/VersaToolsBot)**转发**一条第2步新建频道中的消息，获取`TG_CHAT_ID`（频道ID）
-
-     <img src="static/readme/202409071751619.png" style="width: 67%;" />
-
-  </details>
-
-- 开通**Cloudflare R2渠道**：新建一个Cloudflare R2存储桶，前提是需要绑定支付方式。
-
-  <details>
-      <summary>Cloudflare R2渠道开通方式</summary>
-  
-  
-  1. 前往Cloudflare Dashboard，选择`R2 存储对象`
-  
-     ![](static/readme/202411052318204.png)
-  
-  2. 选择`创建存储桶`，名称随意，填完后点击`创建存储桶`即可完成创建
-  
-     ![](static/readme/202411052319402.png)
-  
-  3. 根据需求可选操作：如果**需要启用图像审查，需要开启存储桶的公网访问权限**，有两种开启方式，详见下图。无论你选择哪种方式，都需要记下完整的公网访问链接，格式为`https://xxxx.xxx`
-  
-     ![image-20241105232759131](static/readme/202411052327191.png)
-  
-  </details>
-  
-- **S3** API渠道：在服务提供商处，准备`S3_ACCESS_KEY_ID`、`S3_SECRET_ACCESS_KEY`、`S3_BUCKET_NAME`、`S3_ENDPOINT`等必须参数。（常见服务提供商密钥获取教程参见：[CloudFlare-ImgBed常用S3存储配置教程 – yunsen2025的小窝](https://www.yunsen2025.top/cloudflare-imgbed-s3-she-zhi/)）
-
-</details>
-
----
-
-### 3.1.2部署教程
-
-<details>
-    <summary>根据自己需求部署在CloudFlare或服务器上</summary>
-
-
-#### 3.1.2.1部署于Cloudflare
-
-需准备一个**Cloudflare账户**，然后按照以下步骤即可完成部署。
-
-<details>
-    <summary>部署在Cloudflare上的方式</summary>
-
-
-​    按照以下步骤部署图床在 CloudFlare Pages 上。
-
-1. Fork 本仓库
-
-2. 打开 Cloudflare Dashboard，进入 Pages 管理页面，选择创建项目，选择`连接到 Git 提供程序`
-
-   ![image-20250206153541017](static/readme/202502061535204.png)
-
-3. 按照页面提示输入项目名称，选择需要连接的 git 仓库，点击`开始设置`
-
-4. 填写`项目名称`，构建命令填写`npm install`，点击`保存并部署`
-
-   ![image-20250206182329361](static/readme/202502061823616.png)
-
-5. **绑定KV数据库**：
-
-   - 创建一个新的KV数据库
-
-     > ![](static/readme/202408261035367.png)
-     >
-     > ![](static/readme/202408261037971.png)
-
-   - 进入项目对应`设置`->`绑定`->`添加`->`KV 命名空间`->`变量名称`，填写`img_url`，`KV命名空间`选择刚才创建好的KV数据库
-
-6. **重试部署**：前往项目管理界面->`部署`->`最新一次部署后面的···`->`重试部署`
-
-7. 根据**所需存储渠道**进行相关设置：
-
-   - `Cloudflare R2`渠道：
-
-     将前面新建的存储桶绑定到项目（和KV绑定地方一样），**名称**为`img_r2`
-
-     > ![](static/readme/202411052323183.png)
-
-     若要启用 R2 渠道的图像审查，请进入 项目管理页面->系统设置->上传设置 处设置 R2 的公开访问链接，值为前面记下的**R2存储桶公网访问链接**
-
-   - `其他渠道`：进入项目管理页面`https://你的域名/systemConfig#upload`，按照页面提示将3.1中获取的渠道参数填写到对应渠道中，保存设置即可
-
-</details>
-
-
-
-#### 3.1.2.2部署于服务器
-
-如果Cloudflare的**有限访问次数**不能满足你的需求，并且你拥有自己的服务器，可以参照[3.1.2.2节](#3.1.2.2部署于服务器)的教程在服务器上模拟Cloudflare的环境，并开放对应的端口访问服务。
-
-注意由于服务器操作系统、硬件版本复杂多样，相关教程**无法确保适合每一位用户**，遇到报错请尽量利用搜索引擎解决，无法解决也可以提issue寻求帮助。
-
-<details>
-    <summary>Docker Compose部署（推荐）</summary>
-
-1. 新建`docker-compose.yml`文件，复制项目根目录下[docker-compose.yml](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/docker-compose.yml)的内容。
-
-2. 在`docker-compose.yml`同级目录下新建`wrangler.toml`配置文件，其内容为项目名称，环境变量等。（详情参见官方文档[Configuration - Wrangler (cloudflare.com)](https://developers.cloudflare.com/workers/wrangler/configuration/)）
-
-   > 配置文件样例：
-   >
-   > ```toml
-   > name = "cloudflare-imgbed"
-   > compatibility_date = "2024-07-24"
-   > ```
-
-3. 运行`docker compose up -d`启动容器，通过`http://127.0.0.1:7658`访问服务。
-
-
-
-</details>
-
-
-
-<details>
-    <summary>手动部署</summary>
-
-
-
-
-1. 安装服务器操作系统对应的`node.js`，经测试`v22.5.1`版本可以正常使用。（安装教程自行search）
-
-2. 切换到项目根目录，运行`npm install`，安装所需依赖。
-
-3. 在项目根目录下新建`wrangler.toml`配置文件，其内容为项目名称，环境变量等。（详情参见官方文档[Configuration - Wrangler (cloudflare.com)](https://developers.cloudflare.com/workers/wrangler/configuration/)）
-
-   > 配置文件样例：
-   >
-   > ```toml
-   > name = "cloudflare-imgbed"
-   > compatibility_date = "2024-07-24"
-   > ```
-
-4. 在项目根目录下运行`npm run start`，至此，正常情况下项目已经成功部署。项目默认支持通过服务器**本地模拟的R2存储上传**，可通过**管理端系统设置页面**进行其他设置。
-
-   程序默认运行在`8080`端口上，使用`nginx`等服务器反代`127.0.0.1:8080`即可外网访问服务。如需修改端口，可在`package.json`中修改`start`脚本的`port`参数（如下）。
-
-   ```toml
-   "scripts": {
-       "ci-test": "concurrently --kill-others \"npm start\" \"wait-on http://localhost:8080 && mocha\"",
-       "test": "mocha",
-       "start": "npx wrangler pages dev ./ --kv \"img_url\" --r2 \"img_r2\" --port 8080 --persist-to ./data"
-     }
-   ```
-
-   正常启动，控制台输出如下：
-
-   ![202408191829163](static/readme/202408191855625.png)
-
-</details>
-
-
-
-</details>
-
----
-
-### 3.1.3可选配置
-
-<details>
-    <summary>v2.0 后台认证、自定义页面、缓存清除等设置</summary>
-
-​    
-
-请前往 管理端->系统设置 界面，按照提示进行设置，如果有不清楚的设置项，可参考下方v1.0版本的设置介绍内容。
-
-</details>
-
-
-
-<details>
-    <summary>（已过时，可参考部分设置项的具体介绍）v1.0 后台认证、自定义页面、缓存清除等设置</summary>
-
-
-
-
-#### 3.1.3.1后台管理认证
-
-
-后台管理页面默认**不设密码**，需按照如下方式**设置认证**：
-
-1. **配置管理员认证**：
-   - 项目对应`设置`->`环境变量`->`为生产环境定义变量`->`编辑变量` ，添加`BASIC_USER`作为管理员用户名，`BASIC_PASS`作为管理员登录密码
-
-2. **重新部署项目**：
-
-   - 进入项目对应`部署`->`所有部署`，选择最新的一个，点击后面更多按钮（`···`），选择`重试部署`
-
-   - 部署完成后，访问`http(s)://你的域名/dashboard`即可进入后台管理页面
-
-#### 3.1.3.2图片审查
-
-
-支持成人内容审查和自动屏蔽，开启步骤如下：
-
-- 前往https://moderatecontent.com/ 注册并获得一个免费的用于审查图像内容的 API key
-- 打开 Cloudflare Pages 项目的管理页面，依次点击`设置`，`环境变量`，`添加环境变量`
-- 添加一个`变量名称`为`ModerateContentApiKey`，`值`为第一步获得的`API key`，点击`保存`即可
-
-#### 3.1.3.3Web和API上传认证
-
-
-环境变量增加认证码`AUTH_CODE`，值为你想要设置的认证码。
-
-Web端在登录页面输入你的**认证码**即可登录使用；API端需要在上传链接中后缀`authCode`参数，详见[API文档](#4.2.1上传API)。
-
-#### 3.1.3.4访问域名限制
-
-环境变量增加`ALLOWED_DOMAINS`，多个允许的域名用英文`,`分割，如：`域名.xyz,域名.cloudns.be,域名.pp.ua`
-
-#### 3.1.3.5白名单模式
-
-环境变量增加`WhiteList_Mode`，设置为`true`即可开启白名单模式，仅设置为白名单的图片可被访问。
-
-#### 3.1.3.6自定义配置接口
-
-<details>
-    <summary>设置方式</summary>
-
-环境变量增加`USER_CONFIG`，JSON格式（设置时类型选`text`即可），具体字段用途及内容规范见下表。
-
-| 字段名        | 用途                 | 类型          | 内容规范                                                     |
-| ------------- | -------------------- | ------------- | ------------------------------------------------------------ |
-| loginBkImg    | 自定义登录页面背景   | 列表/字符串   | 1、当字段类型为`列表`时，列表中元素为需要添加到轮播列表中的图片链接（列表中只有一张图时即为固定背景），形如`["1.jpg","2.jpg"]`<br />2、当字段类型为`字符串`时，目前**仅支持**字符串值为`bing`，设置为该值时启用bing随机图片轮播模式。 |
-| uploadBkImg   | 自定义上传页面背景   | 列表/字符串   | 同上                                                         |
-| bkInterval    | 轮播背景切换时间间隔 | 正整数        | 设置为背景图的轮播时间，默认`3000`，单位`ms`。<br />例如你希望10s切换一次，设置为`10000`即可。 |
-| bkOpacity     | 背景图透明度         | (0,1]的浮点数 | 展示的背景图透明度，默认为`1`。<br />如果你觉得显示效果不佳，可以自定义，如`0.8` |
-| ownerName     | 页内图床名称         | 字符串        | 只支持`字符串`类型，设置为你自定义的图床名称（默认为`Sanyue`） |
-| logoUrl       | 页内图床Logo         | 字符串        | 只支持`字符串`类型，设置为你自定义的图床Logo链接             |
-| siteTitle     | 网站标题             | 字符串        | 只支持`字符串`类型，设置为你自定义的网站标题                 |
-| siteIcon      | 网站图标             | 字符串        | 只支持`字符串`类型，设置为你自定义的网站图标链接             |
-| footerLink    | 页脚传送门链接       | 字符串        | 只支持`字符串`类型，设置为你自定义的传送地址（如个人博客链接） |
-| disableFooter | 禁用页脚             | boolean       | 支持`boolean`类型，设为`true`时禁用页脚，默认`false`         |
-| urlPrefix     | 全局默认链接前缀     | 字符串        | 只支持`字符串`类型，设置为自定义的全局默认链接前缀，该前缀会覆盖原始默认前缀，但不会覆盖用户自定义的链接前缀 |
-
-> 整体示例：
->
-> ```json
-> 轮播模式：
-> {
-> "uploadBkImg": ["https://imgbed.sanyue.site/file/6910f0b5e65ed462c1362.jpg","https://imgbed.sanyue.site/file/a73c97a1e8149114dc750.jpg"],
-> "loginBkImg":["https://imgbed.sanyue.site/file/ef803977f35a4ef4c03c2.jpg","https://imgbed.sanyue.site/file/0dbd5add3605a0b2e8994.jpg"],
-> "ownerName": "Sanyue",
-> "logoUrl": "https://demo-cloudflare-imgbed.pages.dev/random?type=img"
-> }
-> bing随机图模式：
-> {
-> "uploadBkImg": "bing",
-> "loginBkImg": "bing"
-> }
-> ```
-
-</details>
-
-#### 3.1.3.7远端遥测
-
-便于开发者进行bug的捕捉和定位，但是**过程中可能收集到访问链接、域名等信息**，如您不愿意泄露类似信息给项目开发者，可在环境变量中添加`disable_telemetry`为`true`来退出遥测。
-
-#### 3.1.3.8随机图API
-
-设置`AllowRandom`环境变量，值为`true`，以从图床中随机获取一张图片，详见[API文档](#4.2.2随机图API)。
-
-#### 3.1.3.9管理端删除、拉黑等操作优化（缓存删除）
-
-正常情况下，因为CloudFlare CDN缓存的存在，在管理端进行删除、拉黑、加白名单等操作不会立即生效，需要等到缓存过期才能生效。
-
-**为了让操作立即生效**，请添加`CF_ZONE_ID`、`CF_EMAIL`、`CF_API_KEY`环境变量，获取方式如下：
-
-<details>
-    <summary>操作详情</summary>
-
-`CF_ZONE_ID`:
-
-![image-20241211123633692](static/readme/20241211123633692.png)
-
-`CF_EMAIL`:即登录CloudFlare账号的邮箱
-
-`CF_API_KEY`:
-
-![image-20241211140019607](static/readme/202412111400766.png)
-
-</details>
-
-##### </details>
-
----
-
-### 3.1.4其他操作指南
-
-<details>
-    <summary>环境变量修改、程序更新等教程</summary>
-
-1. **修改环境变量方式**：
-
-
-![](static/readme/202408261040233.png)
-
-**修改环境变量后需要重新部署才能生效！**
-
-![](static/readme/202408261041507.png)
-
-2. **程序更新方式**：
-
-
-去到 Github 你之前 fork 过的仓库依次选择`Sync fork`->`Update branch`即可，稍等一会，Cloudflare Pages 检测到仓库更新之后便会自动部署最新代码。
-
-如果有新的环境变量需要添加，请根据文档要求进行添加，然后重试部署。
-
-![](static/readme/202409161736365.png)
-
-</details>
-
-</details>
-
-## 3.2定制化修改
-
-按照`3.1`步骤部署完成后，前往仓库[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub?tab=readme-ov-file)，按照操作说明进行DIY和打包操作，最后将打包好的`/dist`目录中的内容替换到该仓库的根目录下即可（复制+替换）。
-
-# 4.Usage
-
-## 4.1Web端使用
+**演示站点**：[CloudFlare ImgBed](https://cfbed.1314883.xyz/) 访问密码：`cfbed`
 
 ![image-20250313204101984](static/readme/202503132041511.png)
 
 ![image-20250313204138886](static/readme/202503132041072.png)
 
+<details>
+    <summary>其他页面效果展示</summary>
+
 ![image-20250313204308225](static/readme/202503132043466.png)
 
 ![image-20250314152355339](static/readme/202503141524797.png)
 
+![status-page](static/readme/status-page.png)
+
 ![image-20250313204325002](static/readme/202503132043265.png)
 
-## 4.2API文档
 
-<details>
-    <summary>API文档</summary>
-
-### 4.2.1上传API
-
-| 接口名称     | /upload                                                      |
-| ------------ | ------------------------------------------------------------ |
-| **接口功能** | 上传图片或视频                                               |
-| **请求方法** | POST                                                         |
-| **请求参数** | **Query参数**：<br />`authCode`: string类型，即为你设置的认证码<br />`serverCompress`: boolean类型，表示是否开启服务端压缩（仅针对图片文件、Telegram上传渠道生效，默认为`true`）<br />`uploadChannel`: string类型，可选取值为`telegram`、`cfr2`和`s3`，分别代表 telegram bot 渠道、Cloudflare R2 渠道和 S3 渠道，默认为`telegram` 渠道<br />`autoRetry`: boolean类型，表示是否开启上传失败自动切换渠道重试，默认开启<br />`uploadNameType`: string类型，表示文件命名方式，可选值为`[default, index, origin, short]`，分别代表默认`前缀_原名`命名、`仅前缀`命名、`仅原名`命名和`短链接`命名法，默认为`default`<br />`returnFormat`:string类型，表示返回链接格式，可选值为`[default, full]`，分别代表默认的`/file/id`格式、完整链接格式<br />`uploadFolder`:string类型，指定上传目录，用相对路径表示，例如上传到img/test目录需填`img/test`<br />**Body参数(application/form-data)**：<br />`file`: file类型，你要上传的文件 |
-| **返回响应** | `data[0].src`为获得的图片链接（注意不包含域名，需要自己添加） |
-
-> **请求示例**：
->
-> ```bash
-> curl --location --request POST 'https://your.domain/upload?authCode=your_authCode' \
-> 
-> --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-> 
-> --form 'file=@"D:\\杂文件\\壁纸\\genshin109.jpg"'
-> ```
->
-> **响应示例**：
->
-> ```json
-> [
->  {
->      "src": "/file/738a8aaacf4d88d1590f9.jpg"
->  }
-> ]
-> ```
-
-### 4.2.2随机图API
-
-
-| 接口名称     | /random                                                      |
-| ------------ | ------------------------------------------------------------ |
-| **接口功能** | 从图床中随机返回一张图片的链接（注意会消耗列出次数）         |
-| **前置条件** | 设置`AllowRandom`环境变量，值为`true`                        |
-| **请求方法** | GET                                                          |
-| **请求参数** | **Query参数**：<br />`content`:返回的文件类型，可选值有`[image, video]`，多个使用`,`分隔，默认为`image`<br />`type`: 设为`img`时直接返回图片（此时form不生效）；设为`url`时返回完整url链接；默认返回随机图的文件路径。<br />`form`: 设为`text`时直接返回文本，默认返回json格式内容。<br />`dir`: 读取目录，使用相对路径，例如`img/test`会返回该目录以及所有子目录下的文件。 |
-| **响应格式** | 1、当`type`为`img`时：<br />返回格式为`image/jpeg`<br />2、当`type`为其他值时：<br />当`form`不是`text`时，返回JSON格式内容，`data.url`为返回的链接/文件路径。<br />否则，直接返回链接/文件路径。 |
-
-> **请求示例**：
->
-> ```bash
-> curl --location --request GET 'https://your.domain/random' \
-> --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)'
-> ```
->
-> **响应示例**：
->
-> ```json
-> {
->  "url": "/file/4fab4d423d039b4665a27.jpg"
-> }
-> ```
 
 </details>
 
-# 5.TODO
 
-## 5.1Add Features💕
+# 4. Tips
 
-<details>
-    <summary>功能更新列表</summary>
+- **前端开源**：参见[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)项目。
 
+<<<<<<< HEAD
 
 1. :white_check_mark: ~~增加粘贴图片上传功能~~（2024.7.22已完成）
 2. :white_check_mark:~~增加markdown、html等格式链接复制功能~~（2024.7.21已完成）
@@ -1021,6 +548,9 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
 # 7.Tips
 
 - 前端开源，参见[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)项目。
+=======
+- **生态建设**：欢迎社区参与生态建设，欢迎提交 PR 或者 Issue，优质内容参见[官网生态建设页面](https://cfbed.sanyue.de/about/ecosystem.html)。
+>>>>>>> 8b4ebb4fc8f9b507e0fce1655bb8b80dadef58c5
 
 - **赞助**：项目维护不易，喜欢本项目的话，可以作者大大一点小小的鼓励哦，您的每一份支持都是我前进的动力\~ 
 
@@ -1028,6 +558,7 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
   
 - **Sponsors**：感谢以下赞助者对本项目的支持！
 
+<<<<<<< HEAD
   <a href="https://afdian.com/a/nothin">
         <img src="https://pic1.afdiancdn.com/user/e8af1436138e11ed945852540025c377/avatar/59db0533d82e4198f59e63df63a1917f_w640_h640_s114.jpeg?imageView2/1/w/240/h/240" width="100"/>
       </a> <a href="https://afdian.com/u/1acef0be02d911ee90695254001e7c00">
@@ -1036,9 +567,30 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
         <img src="https://pic1.afdiancdn.com/default/avatar/avatar-purple.png?imageView2/1/" width="100"/></a><a href="https://afdian.com/u/42e1c47e16a411f0baff52540025c377">
         <img src="https://pic1.afdiancdn.com/default/avatar/avatar-purple.png?imageView2/1/" width="100"/></a><a href="https://afdian.com/a/yono233">
         <img src="https://pic1.afdiancdn.com/user/73b45190c98711eeaa425254001e7c00/avatar/26afa95554d4bbcd748e6432ab56f824_w580_h580_s145.jpeg?imageView2/1/w/240/h/240" width="100"/></a>
+=======
+  [![赞助者](https://afdian-sponsors.sanyue.de/image)](https://afdian.com/a/marseventh)
+  
+- **Contributors**：感谢以下贡献者对本项目的无私贡献！
+>>>>>>> 8b4ebb4fc8f9b507e0fce1655bb8b80dadef58c5
 
-# 8.Star History
+  [![Contributors](https://contrib.rocks/image?repo=Marseventh/Cloudflare-ImgBed)](https://github.com/MarSeventh/CloudFlare-ImgBed/graphs/contributors)
+
+# 5. Star History
+
+**如果觉得项目不错希望您能给个免费的star✨✨✨，非常感谢！**
+<<<<<<< HEAD
+=======
 
 [![Star History Chart](https://api.star-history.com/svg?repos=MarSeventh/CloudFlare-ImgBed,MarSeventh/Sanyue-ImgHub&type=Date)](https://star-history.com/#MarSeventh/CloudFlare-ImgBed&MarSeventh/Sanyue-ImgHub&Date)
 
-**如果觉得项目不错希望您能给个免费的star✨✨✨，非常感谢！**
+# 6. Special Sponsors
+
+- **[CloudFlare](https://www.cloudflare.com) & [EdgeOne](https://edgeone.ai/?from=github)**：提供CDN加速和安全保护服务
+
+  <a href="https://www.cloudflare.com"><img src="static/readme/cloudflare-logo.png" alt="Cloudflare Logo" height="25"></a> <a href="https://edgeone.ai/?from=github"><img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" alt="Tencent Logo" height="25"></a>
+
+- **[亚洲云](https://www.asiayun.com) & [DartNode](https://dartnode.com)**：提供云计算服务资源支持
+
+  [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
+>>>>>>> 8b4ebb4fc8f9b507e0fce1655bb8b80dadef58c5
